@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Clothing store</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-info">
+        <div class="header-info__container container">
+          <div class="header-info__contacts">
+            <div class="header-info__phone-number">
+              <div class="header-info__icon">
+                <img src="header/phone.svg" alt="phone" />
+              </div>
+              <a href="tel:8801234567894" class="header-info__item"
+                >+88012 3456 7894</a
+              >
+            </div>
+            <div class="header-info__email">
+              <div class="header-info__icon">
+                <img src="header/letter.svg" alt="letter" />
+              </div>
+              <a href="mailto: support@ui-lib.com" class="header-info__item">
+                support@ui-lib.com
+              </a>
+            </div>
+          </div>
+          <div class="header-info__setting">
+            <div class="header-info__help-links">
+              <div class="header-info__help-link">
+                <a href="">Theme FAQ"s</a>
+              </div>
+              <div class="header-info__help-link">
+                <a href="">Need Help?</a>
+              </div>
+            </div>
+            <div class="header-info__parametrs">
+              <div class="header-info__parametr" tabindex="0">
+                <div id="en" style="margin: 0px" class="_language _active">
+                  EN
+                </div>
+                <div id="ru" style="margin: 0px" class="_language">RU</div>
+                <div style="margin: 0" class="arrow">
+                  <img src="header/arrow.svg" alt="arrow" />
+                </div>
+                <ul>
+                  <li id="rus" style="margin-right: 0px">RU</li>
+                  <li id="eng" style="margin-bottom: 0px">EN</li>
+                </ul>
+              </div>
+              <div class="header-info__parametr">
+                <div id="dollar" style="margin: 0px" class="_currency _active">
+                  USD
+                </div>
+                <div id="rubl" style="margin: 0px" class="_currency">RUB</div>
+                <div style="margin: 0px" class="arrow">
+                  <img src="header/arrow.svg" alt="arrow" />
+                </div>
+                <ul>
+                  <li id="usd" style="margin-right: 0px">USD</li>
+                  <li id="rub" style="margin-bottom: 0px">RUB</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__menu">
+        <div class="header-menu__container container">
+          <div class="menu__search">
+            <a href="" class="menu__logo">
+              <img src="header/logo.svg" alt="logo" />
+            </a>
+            <div class="menu__search-bar">
+              <div id="search__icon" type="submit">
+                <img src="header/search_icon.svg" alt="search_icon" />
+              </div>
+              <form action="" method="get">
+                <input type="" placeholder="Searching for..." />
+              </form>
+              <button class="button panel-categories open-modal">
+                All categories
+                <div class="arrow _arrow-dark">
+                  <img src="header/arrow_dark.svg" alt="" />
+                </div>
+                <div class="modal _modal-all-categories">
+                  <ul>
+                    <li><a href="#">Toys</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Gaming</a></li>
+                    <li><a href="#">Furniture</a></li>
+                    <li><a href="#">Fashion</a></li>
+                  </ul>
+                </div>
+              </button>
+            </div>
+            <div class="user-panel">
+              <a href="#" class="user-panel__item">
+                <div class="counter">
+                  <div class="quantity">0</div>
+                </div>
+                <img src="header/user_account_icon.svg" alt="" />
+              </a>
+              <a href="#" class="user-panel__item">
+                <div class="counter">
+                  <div class="quantity">3</div>
+                </div>
+                <img src="header/user_buy_icon.svg" alt="" />
+              </a>
+            </div>
+          </div>
+          <nav class="menu-nav">
+            <div class="menu-nav__categories open-modal">
+              <div class="menu-nav__categories-group">
+                <div class="menu-nav__categories-icon">
+                  <img src="header/categories_icon.svg" alt="" />
+                </div>
+                <div class="menu-nav__categories-title">Categories</div>
+              </div>
+              <div class="menu-nav__categories-arrow arrow">
+                <img src="header/categories_arrow.svg" alt="" />
+              </div>
+              <div class="categories__modal modal">Categories</div>
+            </div>
+            <div class="menu-nav__navigation">
+              <div class="menu-nav__navigation-item open-modal">
+                <div class="flex-group">
+                  <div class="menu-nav__item-title">Home</div>
+                  <div class="menu-nav__item-arrow arrow">
+                    <img src="header/arrow_gray.svg" alt="" />
+                  </div>
+                </div>
+                <div class="navigation-item__modal modal">
+                  <ul>
+                    <li><a href="">menu </a></li>
+                    <li><a href="">clothes </a></li>
+                    <li><a href="">categories </a></li>
+                    <li><a href="">contacts </a></li>
+                    <li><a href="">another </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="menu-nav__navigation-item open-modal">
+                <div class="flex-group">
+                  <div class="menu-nav__item-title">Mega Menu</div>
+                  <div class="menu-nav__item-arrow arrow">
+                    <img src="header/arrow_gray.svg" alt="" />
+                  </div>
+                </div>
+                <div class="navigation-item__modal modal">
+                  <ul>
+                    <li><a href="">mege super </a></li>
+                    <li><a href="">mega clothes </a></li>
+                    <li><a href="">mega contacts </a></li>
+                    <li><a href="">mega mega </a></li>
+                    <li><a href="">super mega </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                id="full-screen-menu"
+                class="menu-nav__navigation-item open-modal"
+              >
+                <div class="flex-group">
+                  <div class="menu-nav__item-title">Full Screen Menu</div>
+                  <div class="menu-nav__item-arrow arrow">
+                    <img src="header/arrow_gray.svg" alt="" />
+                  </div>
+                </div>
+                <div class="navigation-item__modal modal">
+                  <ul>
+                    <li><a href="">full </a></li>
+                    <li><a href="">i need full </a></li>
+                    <li><a href="">mega full </a></li>
+                    <li><a href="">mega clothes </a></li>
+                    <li><a href="">simple full </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="menu-nav__navigation-item open-modal">
+                <div class="flex-group">
+                  <div class="menu-nav__item-title">Pages</div>
+                  <div class="menu-nav__item-arrow arrow">
+                    <img src="header/arrow_gray.svg" alt="" />
+                  </div>
+                </div>
+                <div class="navigation-item__modal modal">
+                  <ul>
+                    <li><a href="">pages_1 </a></li>
+                    <li><a href="">pages_2 </a></li>
+                    <li><a href="">pages_3 </a></li>
+                    <li><a href="">pages_4 </a></li>
+                    <li><a href="">pages_5 </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="menu-nav__navigation-item open-modal">
+                <div class="flex-group">
+                  <div class="menu-nav__item-title">User Account</div>
+                  <div class="menu-nav__item-arrow arrow">
+                    <img src="header/arrow_gray.svg" alt="" />
+                  </div>
+                </div>
+                <div class="navigation-item__modal modal">
+                  <ul>
+                    <li><a href="">account </a></li>
+                    <li><a href="">personal info </a></li>
+                    <li><a href="">contacts </a></li>
+                    <li><a href="">story buy </a></li>
+                    <li><a href="">user setting </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="menu-nav__navigation-item open-modal">
+                <div class="flex-group">
+                  <div class="menu-nav__item-title">Vendor Account</div>
+                  <div class="menu-nav__item-arrow arrow">
+                    <img src="header/arrow_gray.svg" alt="" />
+                  </div>
+                </div>
+                <div class="navigation-item__modal modal">
+                  <ul>
+                    <li><a href="">vendor contact</a></li>
+                    <li><a href="">vendor name</a></li>
+                    <li><a href="">vendor products</a></li>
+                    <li><a href="">top vendor</a></li>
+                    <li><a href="">vendor statistics</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <script src="script.js"></script>
+  </body>
+</html>
