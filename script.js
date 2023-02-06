@@ -1,5 +1,6 @@
 "use strict";
-//ОТОБРАЖЕНИЕ СТОЛБЦА ВЫБОРА ПАРАМЕТРОВ////////////
+//ОТОБРАЖЕНИЕ СТОЛБЦА ВЫБОРА ПАРАМЕТРОВ
+
 let arrows = document.querySelectorAll(".arrow");
 
 if (arrows.length > 0) {
@@ -20,9 +21,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// потеря фокуса/////////////////////////////
-
-//ПЕРЕМЕННЫЕ
+//переменные
 let parametrElements = document.querySelectorAll(".header-info__parametrs li ");
 let ru = document.querySelector("#ru");
 let en = document.querySelector("#en");
@@ -32,7 +31,7 @@ let language = document.querySelectorAll("._language");
 let currency = document.querySelectorAll("._currency");
 const parametrGroups = document.querySelectorAll(".header-info__parametr");
 
-//ОБРАБОТЧИКИ СОБЫТИЙ
+//обработчики событий
 if (parametrElements.length > 0) {
   for (let index = 0; index < parametrElements.length; index++) {
     const element = parametrElements[index];
@@ -68,13 +67,15 @@ if (parametrElements.length > 0) {
     });
   }
 }
-////////////////////////// МОДАЛЬНЫЕ ОКНА//////////////
+
+//МОДАЛЬНЫЕ ОКНА
 
 //Переменные
 let openModals = document.querySelectorAll(".open-modal");
 let modals = document.querySelectorAll(".modal");
 
 //обработчики событий
+
 document.addEventListener("click", function (e) {
   let clickArray = [];
   for (let index = 0; index < openModals.length; index++) {
@@ -116,10 +117,63 @@ function openModal(modalElement) {
   modalElement.classList.toggle("open");
 }
 
-//СКРЫТИЕ И ОТОБРАЖЕНИЕ СЧЕТЧИКА УВЕДОМЛЕНИЯ//////
+//СКРЫТИЕ И ОТОБРАЖЕНИЕ СЧЕТЧИКА УВЕДОМЛЕНИЯ
 let quantitys = document.querySelectorAll(".quantity");
 quantitys.forEach((el) => {
   if (el.innerHTML == 0) {
     el.parentElement.classList.add("none");
   }
 });
+
+//СКРОЛЛЕР//
+
+//переменные
+const vetrinaBody = document.querySelector(".vetrina__body");
+const scroller = document.querySelector(".scroller");
+const nextBtn = document.querySelector(".btn.next");
+const prevBtn = document.querySelector(".btn.prev");
+const itemWidth = document.querySelector(".item").clientWidth;
+const item = document.querySelector(".item");
+
+//функции
+
+function btnRemoveActive() {
+  document.querySelectorAll(".btn").forEach((el) => {
+    if (el) {
+      el.classList.remove("_active");
+    }
+  });
+}
+
+function scrollToNextItem() {
+  scroller.scrollBy({ left: itemWidth, top: 0, behavior: "smooth" });
+}
+function scrollToPrevItem() {
+  scroller.scrollBy({ left: -itemWidth, top: 0, behavior: "smooth" });
+}
+
+const nextBtnAddActive = () => {
+  btnRemoveActive();
+  nextBtn.classList.add("_active");
+};
+const prevBtnAddActive = () => {
+  btnRemoveActive();
+  prevBtn.classList.add("_active");
+};
+
+//обработчики событий
+nextBtn.addEventListener("click", nextBtnAddActive);
+prevBtn.addEventListener("click", prevBtnAddActive);
+
+nextBtn.addEventListener("click", scrollToNextItem);
+prevBtn.addEventListener("click", scrollToPrevItem);
+
+//интервальное перелистывание
+setInterval(() => {
+  scrollToNextItem();
+  nextBtnAddActive();
+}, 9000);
+setInterval(() => {
+  scrollToPrevItem();
+  prevBtnAddActive();
+}, 18000);

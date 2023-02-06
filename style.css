@@ -88,10 +88,14 @@ h6 {
 }
 
 /*--------------------*/
-* {
+body {
   font-family: "Open Sans";
   font-weight: 400;
   font-size: 12px;
+}
+
+.header {
+  margin-bottom: 10.5px;
 }
 
 .container {
@@ -213,6 +217,10 @@ h6 {
 
 .arrow:hover {
   cursor: pointer;
+}
+
+.header-menu {
+  margin-bottom: 20px;
 }
 
 .menu__search {
@@ -426,8 +434,8 @@ h6 {
   align-items: center;
   font-size: 20px;
   margin-top: 50px;
-  width: auto;
-  height: 500px;
+  width: 75vw;
+  height: 80vh;
   background-color: #f6f9fc;
   border-radius: 10px;
 }
@@ -437,7 +445,7 @@ h6 {
 }
 
 .modal {
-  z-index: 2;
+  z-index: 5;
   box-shadow: 0px 2px 7px 1px #2b3445;
   position: absolute;
   align-self: flex-start;
@@ -569,4 +577,313 @@ h6 {
   .menu-nav__categories {
     max-width: 200px;
   }
+}
+.main {
+  padding: 24px 0px;
+  background: #f6f6f6;
+}
+
+.vetrina__body {
+  position: relative;
+  font-size: 12px;
+  line-height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.vetrina__main-banners {
+  position: relative;
+  display: flex;
+  width: 74.7%;
+}
+.vetrina__main-banner {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-width: 100%;
+  background-image: url(vetrin_image/main-banner.jpg);
+  background-size: cover;
+  background-position: right;
+}
+.vetrina__main-banner:after {
+  content: "";
+  padding-top: 54.33%;
+}
+.vetrina__additional-banners {
+  width: 24%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.vetrina__additional-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.vetrina__additional-banner::after {
+  content: "";
+  padding-top: 81.76%;
+}
+
+._new-arrivals {
+  background-image: url(vetrin_image/additional-banner_1.jpg);
+  background-size: cover;
+  background-position: right;
+}
+
+._gaming {
+  background-image: url(vetrin_image/additional-banner_2.jpg);
+  background-size: cover;
+  background-position: right;
+}
+
+.main-banner__content {
+  position: absolute;
+  margin-left: 8.7%;
+}
+.main-banner__title-one {
+  margin-top: -6px;
+  line-height: 137%;
+  font-size: 2.5em;
+  color: #222222;
+  text-transform: uppercase;
+}
+.main-banner__title-two {
+  margin-top: -7px;
+  font-weight: 700;
+  font-size: 5em;
+  color: #222222;
+  line-height: 137%;
+  text-transform: uppercase;
+}
+.main-banner__discount {
+  margin-top: 3px;
+  font-weight: 600;
+  font-size: 2.5em;
+  color: #222222;
+  line-height: 137%;
+  text-transform: uppercase;
+}
+.main-banner__discount .red-span {
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #d23f57;
+}
+.main-banner__shipping {
+  margin-top: 5px;
+  font-size: 1.5em;
+  line-height: 133%;
+  color: #222222;
+}
+.main-banner__shop-button {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 153.31px;
+  height: 45.19px;
+  background-color: #222222;
+  font-weight: 600;
+  font-size: 1.25em;
+  color: #fff;
+  line-height: 175%;
+  text-transform: capitalize;
+}
+
+.additional-banner__content {
+  position: absolute;
+  margin-left: 10.8%;
+}
+.additional-banner__title-one {
+  font-weight: 400;
+  color: #2b3445;
+  font-size: 1.08em;
+  letter-spacing: 0.0923em;
+  line-height: 139%;
+}
+.additional-banner__title-two {
+  font-weight: 600;
+  font-size: 1.666em;
+  line-height: 128%;
+}
+.additional-banner__shop-button {
+  display: flex;
+  align-items: center;
+  margin-top: 14%;
+  line-height: 129%;
+  font-weight: 600;
+  font-size: 1.166em;
+  color: #222;
+}
+.additional-banner__shop-button div {
+  margin-left: 11%;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .vetrina__body {
+    font-size: 11px;
+  }
+}
+@media (max-width: 1100px) {
+  .vetrina__body {
+    font-size: 10px;
+  }
+}
+@media (max-width: 1000px) {
+  .vetrina__body {
+    font-size: 9px;
+  }
+  .additional-banner__content {
+    margin-top: -17%;
+  }
+}
+@media (max-width: 870px) {
+  .vetrina__body {
+    font-size: 8px;
+  }
+}
+@media (max-width: 800px) {
+  .vetrina__body {
+    flex-wrap: wrap;
+  }
+  .vetrina__main-banners {
+    width: 100%;
+  }
+  .vetrina__main-banner {
+    margin-bottom: 10px;
+  }
+  .vetrina__additional-banners {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .vetrina__additional-banner {
+    width: 49%;
+  }
+  .vetrina__body {
+    font-size: 11px;
+  }
+  .additional-banner__content {
+    margin-top: 0%;
+  }
+}
+@media (max-width: 640px) {
+  .vetrina__body {
+    font-size: 10px;
+  }
+}
+@media (max-width: 580px) {
+  .vetrina__body {
+    font-size: 9px;
+  }
+}
+@media (max-width: 530px) {
+  .vetrina__body {
+    font-size: 8px;
+  }
+}
+@media (max-width: 470px) {
+  .main-banner__content {
+    margin-left: 3%;
+  }
+  .vetrina__main-banners {
+    height: 240px;
+  }
+  .vetrina__additional-banners {
+    height: 165px;
+  }
+}
+@media (max-width: 450px) {
+  .vetrina__body {
+    font-size: 10px;
+  }
+  .vetrina__main-banner {
+    background-image: none;
+    background-color: #f9f8f3;
+  }
+  ._new-arrivals {
+    background-image: none;
+    background-color: #e4e4e4;
+  }
+  ._gaming {
+    background-image: none;
+    background-color: #f1eae4;
+  }
+  .main-banner__content {
+    margin: 0;
+  }
+  .vetrina__main-banner {
+    justify-content: center;
+  }
+  .additional-banner__content {
+    margin: 0;
+  }
+  .vetrina__additional-banner {
+    justify-content: center;
+  }
+}
+.scroller {
+  display: flex;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+.scroller::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.item {
+  scroll-snap-align: start;
+  min-width: 100%;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 93.2%;
+  width: 74.7%;
+  z-index: 3;
+  display: none;
+  justify-content: center;
+}
+
+@media (min-width: 870px) {
+  .scroll-btn {
+    display: flex;
+  }
+}
+.scroll-btn .btn {
+  display: flex;
+  padding: 0.4px 0.4px 0px 0px;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #222222;
+  border-radius: 50%;
+}
+
+.scroll-btn .btn:not(:first-child) {
+  margin-left: 8px;
+}
+
+.scroll-btn .btn:hover {
+  cursor: pointer;
+}
+
+.black-circle {
+  display: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #222;
+}
+
+.btn._active .black-circle {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
