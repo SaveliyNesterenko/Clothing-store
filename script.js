@@ -177,3 +177,30 @@ setInterval(() => {
   scrollToPrevItem();
   prevBtnAddActive();
 }, 18000);
+
+//КАРУСЕЛЬ
+//переменные
+const carousels = document.querySelectorAll(".carousel");
+
+//обработчики событий
+
+carousels.forEach((el) => {
+  let carousel = el;
+  let carouselPrevBtn = carousel.querySelector(".carousel-prev");
+  let carouselNextBtn = carousel.querySelector(".carousel-next");
+  let carouselScroller = carousel.querySelector(".carousel-scroller");
+  carouselNextBtn.addEventListener("click", function () {
+    carouselScroller.scrollBy({
+      left: 200,
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+  carouselPrevBtn.addEventListener("click", function () {
+    carouselScroller.scrollBy({
+      left: -200,
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
