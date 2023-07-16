@@ -34,21 +34,6 @@
 <!-- /Yandex.Metrika counter -->
     <header class="header">
       <div class="header-info">
-        <div id="vk_recommend"></div>
-<script type="text/javascript">
-    VK.Widgets.Recommended('vk_recommend');
-</script>
-        <script
-  type="text/javascript"
-  src="https://vk.com/js/api/openapi.js?168"
-  charset="windows-1251"
-></script>
-
-<!-- Put this script tag to the place, where the Bookmarks block will be -->
-<div id="vk_bookmarks"></div>
-<script type="text/javascript">
-  VK.Widgets.Bookmarks("vk_bookmarks", {});
-</script>
         <div class="header-info__container container">
           <div class="header-info__contacts">
             <div class="header-info__phone-number">
@@ -117,6 +102,18 @@
             <a href="" class="menu__logo">
               <img src="header/logo.svg" alt="logo" />
             </a>
+            <!-- Put this script tag to the <head> of your page -->
+<script
+  type="text/javascript"
+  src="https://vk.com/js/api/openapi.js?168"
+  charset="windows-1251"
+></script>
+
+<!-- Put this script tag to the place, where the Bookmarks block will be -->
+<div id="vk_bookmarks"></div>
+<script type="text/javascript">
+  VK.Widgets.Bookmarks("vk_bookmarks", {});
+</script>
             <div class="menu__search-bar">
               <div id="search__icon" type="submit">
                 <img src="header/search_icon.svg" alt="search_icon" />
